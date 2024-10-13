@@ -1,0 +1,409 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Grigor Pahlevanyan's CV},
+    pdfauthor={Grigor Pahlevanyan},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Grigor Pahlevanyan - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{Grigor Pahlevanyan}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        % \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Your Location}%
+        % \kern 0.25 cm%
+        % \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:pahlevag@mcmaster.ca}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}pahlevag@mcmaster.ca}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+1 647-450-8086}{{\footnotesize\faPhone*}\hspace*{0.13cm}+1 647-450-8086}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://grigor-pahlevanyan.github.io/}{{\footnotesize\faLink}\hspace*{0.13cm}https://grigor-pahlevanyan.github.io/}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/grigorpahlevanyan/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}Grigor Pahlevanyan}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/Grigor-Pahlevanyan}{{\footnotesize\faGithub}\hspace*{0.13cm}Grigor-Pahlevanyan}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Education}
+        
+        \begin{threecolentry}{\textbf{BS}}{
+            Sept 2020 – May 2025
+        }
+            \textbf{McMaster University}, Mechatronics Engineering with Coop
+            \begin{highlights}
+                \item GPA: 3.8/4.0 %(\href{https://example.com}{a link to somewhere})
+                \item \textbf{Coursework:} Control Systems, Software development, Predictive Intelligence, Embedded Systems, Digital and Analog circuit design, Data-structures and algorithms, Thermodynamics
+            \end{highlights}
+        \end{threecolentry}
+
+
+    
+    \section{Work Experience}
+
+        
+        \begin{twocolentry}{
+            Palo Alto, CA, USA
+
+        May 2024 – Aug 2024
+        }
+            \textbf{Tesla}, Power Electronics Program Manager Intern
+            \begin{highlights}
+                \item Simultaneously managing four vehicle projects
+                \item Delegating tasks and organizing project road-map
+                \item Ensuring on time delivery of projects 
+                \item Communicating and inspiring confidence in multiple layers of management
+                \item Excellent productivity in fast pace environment
+
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            Toronto, ON, Canada
+
+        May 2022 – Aug 2023
+        }
+            \textbf{Thales}, Component Engineering Intern
+            \begin{highlights}
+                \item Managed component databases
+                \item Created and updated ECN requests
+                \item Conducted component obsolescence analysis
+                \item Compared parts from various manufacturers and determined key benefits of each.
+                \item Created a software program using Selenium library in Python to port down 1000+ parts from one database to another.
+            \end{highlights}
+        \end{twocolentry}
+
+\section{Extracurricular Experience}
+
+        \begin{twocolentry}{
+
+        Sept 2024 – Present
+        }
+            \textbf{Battery Workforce Challenge}, BMS Hardware Lead
+            \begin{highlights}
+                \item Creating hardware components to support BMS functionality
+                \item Managing a team of 8 engineers and working with cross-functional teams
+      
+            \end{highlights}
+        \end{twocolentry}
+        
+        \begin{twocolentry}{
+            % Palo Alto, CA, USA
+
+        Nov 2021 – Aug 2024
+        }
+            \textbf{Solar Car Project}, Electrical Manager
+            \begin{highlights}
+                \item   Managing the electrical leads and workflow of the club.
+                \item   Developed the high voltage electrical architecture of the Solar Car. How the entire HV power is distributed.
+                \item   Created the Automatic Transfer Switch (Design and PCB)
+                \item   Created a pre-charge circuit board for motor controller
+                \item   Designed the high voltage battery pack, and researched about Maximum Power Point tracker (MPPT) devices
+                \item   Created a 96V Battery pack with a BMS.
+                \item   Created the Power Management board. 
+                \item   Developed the Pedal Control program and circuitry (analog input from pedal, convert to PWM signal)
+                \item   Using Altium and Eagle for PCB designing.
+                \item	Working with high voltage systems of 110V 
+                \\ % Give some space
+                
+                % \begin{left}
+                %     \textit{Created means: Simulate, prototype, test, schematic, PCB layout designed, manufactured, assembled, and soldered.} 
+                % \end{left}
+
+
+            \end{highlights}
+        \end{twocolentry}
+
+
+        \vspace{0.2 cm}
+
+        % \begin{twocolentry}{
+
+        % May 2021 – Aug 2022
+        % }
+        %     \textbf{Formula Electric}, Electrical Engineering Member
+        %     \begin{highlights}
+        %         \item Managed component databases
+        %         \item Created and updated ECN requests
+        %         \item Conducted component obsolescence analysis
+        %         \item Compared parts from various manufacturers and determined key benefits of each.
+        %         \item Created a software program using Selenium library in Python to port down 1000+ parts from one database to another.
+        %     \end{highlights}
+        % \end{twocolentry}
+    
+        
+    \section{Projects}
+        
+        \begin{twocolentry}{
+        Nov 2021 – Present
+        \href{https://www.behance.net/gallery/165815539/Smart-Safety-Seat}{Documentation}
+
+        }
+            \textbf{Vehicle Safety Mechanism [Personal Project]}
+            \begin{highlights}
+                \item   Invented a new driver/passenger seat for maximal safety protection during vehicle collisions
+                \item   Developed an artificially intelligent system that uses LiDAR technology to predict collisions and adjust the position of all/any seat autonomously.
+                \item   Created software algorithms using C++ to work with microcontrollers, 360DEG LiDAR Sensor and camera.
+                \item   Used NVIDIA Nano Jetson, NVIDIA AGX ORIN, Oak-D Lite 3D depth camera, along with stepper motors and high power transformers.
+                \item   In the process of submitting a US patent.
+            \end{highlights}
+        \end{twocolentry}
+
+        \begin{twocolentry}{
+        Sept 2024 – Present
+        % \href{https://www.behance.net/gallery/165815539/Smart-Safety-Seat}{Documentation}
+
+        }
+            \textbf{AI Meeting Assistant [Capstone Project]}
+            \begin{highlights}
+                \item   Incorporated speech recognition using Whisper model from OpenAI
+                \item   Incorporated a speech diarization model from pyannote
+                \item   Using an LLM model to generate meeting related data (i.e. Meeting minutes, action items, attendance, key items, etc. )
+                \item   Using NVIDIA AGX ORIN as a remote server to do high speed computation with the AI models.
+            \end{highlights}
+        \end{twocolentry}
+
+
+
+\section{Publications}
+
+        
+        \begin{samepage}
+            \begin{twocolentry}{
+                July 2023
+            }
+                \textbf{Vehicle Seat Design to Mitigate Collision Impact on Occupant Safety}
+
+                \vspace{0.10 cm}
+
+                \mbox{\textbf{\textit{Grigor Pahlevanyan}}}, \mbox{Dr. Ishwar Singh}
+                \vspace{0.10 cm}
+
+        \href{https://www.eng.mcmaster.ca//app/uploads/2024/01/BRIC-Proceedings-2023-V3-1.pdf}{BRIC Symposium Paper Link}
+        \\\href{https://drive.google.com/file/d/1Pe78u0-e-F5VHdll2lBr9SlOcRew7U9b/view}{Certificate of Participation}
+        
+            \end{twocolentry}
+        \end{samepage}
+        
+    
+    \section{Skills}
+
+       
+        \begin{onecolentry}
+            \textbf{Programming Languages:} C++, C, Python, Julia, Matlab
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Circuit/PCB Design:} Altium, Eagle, Fusion 360
+        \end{onecolentry}
+        
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Mechanical CAD:} SOLIDWORKS, Autodesk Inventor 
+        \end{onecolentry}
+        
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            \textbf{Other Tools:} NI Multisim, SAP ERP tool, GitHub
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            \textbf{Other Skills:} Proficient in Linux and ROS 1
+        \end{onecolentry}
+    
+
+\end{document}

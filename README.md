@@ -1,2 +1,2 @@
 # Resume_latex
-My resume in Latex
+In this repo I worked on my resume. 
