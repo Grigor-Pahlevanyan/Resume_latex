@@ -2,38 +2,35 @@
 
 % Packages:
 \usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
-    footskip=1.0 cm, % seperation between body and footer
-    % showframe % for debugging 
-]{geometry} % for adjusting page geometry
-\usepackage[explicit]{titlesec} % for customizing section titles
-\usepackage{tabularx} % for making tables with fixed width columns
-\usepackage{array} % tabularx requires this
-\usepackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
-\usepackage{enumitem} % for customizing lists
-\usepackage{fontawesome5} % for using icons
-\usepackage{amsmath} % for math
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
 \usepackage[
     pdftitle={Grigor Pahlevanyan's CV},
     pdfauthor={Grigor Pahlevanyan},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
-]{hyperref} % for links, metadata and bookmarks
-\usepackage[pscoord]{eso-pic} % for floating text on the page
-\usepackage{calc} % for calculating lengths
-\usepackage{bookmark} % for bookmarks
-\usepackage{lastpage} % for getting the total number of pages
-\usepackage{changepage} % for one column entries (adjustwidth environment)
-\usepackage{paracol} % for two and three column entries
-\usepackage{ifthen} % for conditional statements
-\usepackage{needspace} % for avoiding page brake right after the section title
-\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
@@ -156,7 +153,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+        \small\color{gray}\textit{Last updated in February 2025}\hspace{\widthof{Last updated in February 2025}}
     }}}%
   }%
 }%
@@ -168,14 +165,9 @@
 \renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
 
 
-\begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
-    }
-    \newsavebox\ANDbox
-    \sbox\ANDbox{}
+% [Previous package imports remain the same]
 
+\begin{document}
     \placelastupdatedtext
     \begin{header}
         \fontsize{30 pt}{30 pt}
@@ -184,226 +176,146 @@
         \vspace{0.3 cm}
 
         \normalsize
-        % \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Your Location}%
-        % \kern 0.25 cm%
-        % \AND%
-        \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{mailto:pahlevag@mcmaster.ca}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}pahlevag@mcmaster.ca}}%
         \kern 0.25 cm%
-        \AND%
+        \hspace{0.25 cm}%
         \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{tel:+1 647-450-8086}{{\footnotesize\faPhone*}\hspace*{0.13cm}+1 647-450-8086}}%
         \kern 0.25 cm%
-        \AND%
         \kern 0.25 cm%
-        \mbox{\hrefWithoutArrow{https://grigor-pahlevanyan.github.io/}{{\footnotesize\faLink}\hspace*{0.13cm}https://grigor-pahlevanyan.github.io/}}%
-        \kern 0.25 cm%
-        \AND%
+        \mbox{\hrefWithoutArrow{https://grigor-pahlevanyan.github.io/}{{\footnotesize\faLink}\hspace*{0.13cm}Portfolio}}%
         \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/grigorpahlevanyan/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}Grigor Pahlevanyan}}%
         \kern 0.25 cm%
-        \AND%
         \kern 0.25 cm%
         \mbox{\hrefWithoutArrow{https://github.com/Grigor-Pahlevanyan}{{\footnotesize\faGithub}\hspace*{0.13cm}Grigor-Pahlevanyan}}%
     \end{header}
 
-    \vspace{0.3 cm - 0.3 cm}
-
-
     \section{Education}
-        
-        \begin{threecolentry}{\textbf{BS}}{
-            Sept 2020 – May 2025
-        }
-            \textbf{McMaster University}, Mechatronics Engineering with Coop
+        \begin{twocolentry}{Sept 2020 – May 2025}
+            \textbf{McMaster University}, B.Eng. in Mechatronics Engineering with Coop
             \begin{highlights}
-                \item GPA: 3.8/4.0 %(\href{https://example.com}{a link to somewhere})
-                \item \textbf{Coursework:} Control Systems, Software development, Predictive Intelligence, Embedded Systems, Digital and Analog circuit design, Data-structures and algorithms, Thermodynamics
-            \end{highlights}
-        \end{threecolentry}
-
-
-    
-    \section{Work Experience}
-
-        
-        \begin{twocolentry}{
-            Palo Alto, CA, USA
-
-        May 2024 – Aug 2024
-        }
-            \textbf{Tesla}, Power Electronics Program Manager Intern
-            \begin{highlights}
-                \item Simultaneously managing four vehicle projects
-                \item Delegating tasks and organizing project road-map
-                \item Ensuring on time delivery of projects 
-                \item Communicating and inspiring confidence in multiple layers of management
-                \item Excellent productivity in fast pace environment
-
+                \item GPA: 3.8/4.0
+                \item \textbf{Coursework:} Control Systems, Software Development, Predictive Intelligence, Embedded Systems, Digital and Analog Circuit Design, Data Structures \& Algorithms, Thermodynamics
             \end{highlights}
         \end{twocolentry}
 
+    \section{Professional Experience}
+        \begin{twocolentry}{Palo Alto, CA \\ May 2024 – Aug 2024}
+            \textbf{Tesla} | Power Electronics Program Manager Intern
+            \begin{highlights}
+                \item Managed four vehicle projects, ensuring timely milestone delivery.
+                \item Established clear communication channels across management layers.
+                \item Developed project roadmaps and delegated tasks to cross-functional teams.
+                \item Demonstrated adaptability and productivity in a fast-paced environment.
+                \item Built stakeholder confidence through clear communication and consistent delivery.
+            \end{highlights}
+        \end{twocolentry}
 
         \vspace{0.2 cm}
 
-        \begin{twocolentry}{
-            Toronto, ON, Canada
-
-        May 2022 – Aug 2023
-        }
-            \textbf{Thales}, Component Engineering Intern
+        \begin{twocolentry}{Toronto, ON \\ May 2022 – Aug 2023}
+            \textbf{Thales} | Component Engineering Intern
             \begin{highlights}
-                \item Managed component databases
-                \item Created and updated ECN requests
-                \item Conducted component obsolescence analysis
-                \item Compared parts from various manufacturers and determined key benefits of each.
-                \item Created a software program using Selenium library in Python to port down 1000+ parts from one database to another.
+                \item Automated database migration of 1000+ components using Python and Selenium.
+                \item Managed component databases and maintained detailed documentation.
+                \item Processed ECN requests, ensuring compliance with technical specifications.
+                \item Conducted obsolescence analysis to identify supply chain risks.
+                \item Optimized component selection through cost and performance analysis.
             \end{highlights}
         \end{twocolentry}
 
-\section{Extracurricular Experience}
-
-        \begin{twocolentry}{
-
-        Sept 2024 – Present
-        }
-            \textbf{Battery Workforce Challenge}, BMS Hardware Lead
+    \section{Extracurricular Experience}
+        \begin{twocolentry}{Sept 2024 – Present}
+            \textbf{Battery Workforce Challenge} | BMS Hardware Lead
             \begin{highlights}
-                \item Creating hardware components to support BMS functionality
-                \item Managing a team of 8 engineers and working with cross-functional teams
-      
-            \end{highlights}
-        \end{twocolentry}
-        
-        \begin{twocolentry}{
-            % Palo Alto, CA, USA
-
-        Nov 2021 – Aug 2024
-        }
-            \textbf{Solar Car Project}, Electrical Manager
-            \begin{highlights}
-                \item   Managing the electrical leads and workflow of the club.
-                \item   Developed the high voltage electrical architecture of the Solar Car. How the entire HV power is distributed.
-                \item   Created the Automatic Transfer Switch (Design and PCB)
-                \item   Created a pre-charge circuit board for motor controller
-                \item   Designed the high voltage battery pack, and researched about Maximum Power Point tracker (MPPT) devices
-                \item   Created a 96V Battery pack with a BMS.
-                \item   Created the Power Management board. 
-                \item   Developed the Pedal Control program and circuitry (analog input from pedal, convert to PWM signal)
-                \item   Using Altium and Eagle for PCB designing.
-                \item	Working with high voltage systems of 110V 
-                \\ % Give some space
-                
-                % \begin{left}
-                %     \textit{Created means: Simulate, prototype, test, schematic, PCB layout designed, manufactured, assembled, and soldered.} 
-                % \end{left}
-
-
+                \item Leading BMS hardware development, managing a team of 8 engineers.
+                \item Coordinating with cross-functional teams for system integration and performance.
             \end{highlights}
         \end{twocolentry}
 
-
-        \vspace{0.2 cm}
-
-        % \begin{twocolentry}{
-
-        % May 2021 – Aug 2022
-        % }
-        %     \textbf{Formula Electric}, Electrical Engineering Member
-        %     \begin{highlights}
-        %         \item Managed component databases
-        %         \item Created and updated ECN requests
-        %         \item Conducted component obsolescence analysis
-        %         \item Compared parts from various manufacturers and determined key benefits of each.
-        %         \item Created a software program using Selenium library in Python to port down 1000+ parts from one database to another.
-        %     \end{highlights}
-        % \end{twocolentry}
-    
-        
-    \section{Projects}
-        
-        \begin{twocolentry}{
-        Nov 2021 – Present
-        \href{https://www.behance.net/gallery/165815539/Smart-Safety-Seat}{Documentation}
-
-        }
-            \textbf{Vehicle Safety Mechanism [Personal Project]}
+        \begin{twocolentry}{Nov 2021 – Aug 2024}
+            \textbf{Solar Car Project} | Electrical Manager
             \begin{highlights}
-                \item   Invented a new driver/passenger seat for maximal safety protection during vehicle collisions
-                \item   Developed an artificially intelligent system that uses LiDAR technology to predict collisions and adjust the position of all/any seat autonomously.
-                \item   Created software algorithms using C++ to work with microcontrollers, 360DEG LiDAR Sensor and camera.
-                \item   Used NVIDIA Nano Jetson, NVIDIA AGX ORIN, Oak-D Lite 3D depth camera, along with stepper motors and high power transformers.
-                \item   In the process of submitting a US patent.
+                \item Managed electrical team workflow and inter-department coordination.
+                \item Designed 110V high-voltage electrical architecture for power distribution.
+                \item Developed Automatic Transfer Switch with integrated control systems.
+                \item Created pre-charge circuit board for motor controller integration.
+                \item Engineered 96V battery pack with comprehensive BMS implementation.
+                \item Designed Power Management board for system-wide power control.
+                \item Implemented Pedal Control program with analog-to-PWM signal conversion.
+                \item Utilized Altium and Eagle for PCB design and manufacturing.
+                \item Researched and implemented Maximum Power Point Tracker (MPPT) devices.
             \end{highlights}
         \end{twocolentry}
 
-        \begin{twocolentry}{
-        Sept 2024 – Present
-        % \href{https://www.behance.net/gallery/165815539/Smart-Safety-Seat}{Documentation}
-
-        }
-            \textbf{AI Meeting Assistant [Capstone Project]}
+    \section{Technical Projects}
+        \begin{twocolentry}{Nov 2021 – Present}
+            \textbf{Vehicle Safety Mechanism} | Independent Research Project
             \begin{highlights}
-                \item   Incorporated speech recognition using Whisper model from OpenAI
-                \item   Incorporated a speech diarization model from pyannote
-                \item   Using an LLM model to generate meeting related data (i.e. Meeting minutes, action items, attendance, key items, etc. )
-                \item   Using NVIDIA AGX ORIN as a remote server to do high speed computation with the AI models.
+                \item Invented a safety seat system using LiDAR for collision detection.
+                \item Developed AI-driven algorithms for real-time seat position adjustment.
+                \item Integrated NVIDIA Nano Jetson, AGX ORIN, and Oak-D Lite 3D camera.
+                \item Engineered control systems using stepper motors and high-power transformers.
+                \item Patent application in progress; documentation available at \href{https://www.behance.net/gallery/165815539/Smart-Safety-Seat}{project portfolio}.
             \end{highlights}
         \end{twocolentry}
 
+        \begin{twocolentry}{Sept 2024 – Present}
+            \textbf{AI Meeting Assistant} | Capstone Project Lead
+            \begin{highlights}
+                \item Developed meeting analysis system using OpenAI's Whisper for speech recognition.
+                \item Implemented speaker diarization using pyannote for speaker identification.
+                \item Integrated LLM models for automated meeting minutes and action items.
+                \item Deployed solution on NVIDIA AGX ORIN for high-performance AI processing.
+                \item Developed attendance tracking and key item extraction features.
+            \end{highlights}
+        \end{twocolentry}
 
-
-\section{Publications}
-
-        
+    \section{Publications}
         \begin{samepage}
-            \begin{twocolentry}{
-                July 2023
-            }
+            \begin{twocolentry}{July 2023}
                 \textbf{Vehicle Seat Design to Mitigate Collision Impact on Occupant Safety}
-
                 \vspace{0.10 cm}
-
-                \mbox{\textbf{\textit{Grigor Pahlevanyan}}}, \mbox{Dr. Ishwar Singh}
-                \vspace{0.10 cm}
-
-        \href{https://www.eng.mcmaster.ca//app/uploads/2024/01/BRIC-Proceedings-2023-V3-1.pdf}{BRIC Symposium Paper Link}
-        \\\href{https://drive.google.com/file/d/1Pe78u0-e-F5VHdll2lBr9SlOcRew7U9b/view}{Certificate of Participation}
-        
+                
+                \href{https://www.eng.mcmaster.ca//app/uploads/2024/01/BRIC-Proceedings-2023-V3-1.pdf}{BRIC Symposium Proceedings} \\
+                \href{https://drive.google.com/file/d/1Pe78u0-e-F5VHdll2lBr9SlOcRew7U9b/view}{Certificate of Participation}
             \end{twocolentry}
         \end{samepage}
-        
-    
-    \section{Skills}
 
-       
+    \section{Technical Skills}
         \begin{onecolentry}
-            \textbf{Programming Languages:} C++, C, Python, Julia, Matlab
+            \textbf{Software Development:} C++, C, Python, Julia, MATLAB/Simulink, JavaScript, Git, Docker
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-            \textbf{Circuit/PCB Design:} Altium, Eagle, Fusion 360
+            \textbf{Electrical Design:} Altium, Eagle, Fusion 360, LTSpice, NI Multisim
         \end{onecolentry}
         
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-            \textbf{Mechanical CAD:} SOLIDWORKS, Autodesk Inventor 
+            \textbf{Mechanical Design:} SOLIDWORKS, Autodesk Inventor, AutoCAD
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Machine Learning:} Neural networks, reinforcement learning, model predictive control
         \end{onecolentry}
         
         \vspace{0.2 cm}
         
         \begin{onecolentry}
-            \textbf{Other Tools:} NI Multisim, SAP ERP tool, GitHub
+            \textbf{Other Tools:} SAP ERP tool, CleaQuest, GitHub, Wireshark, JIRA, Confluence
         \end{onecolentry}
 
         \vspace{0.2 cm}
         
         \begin{onecolentry}
-            \textbf{Other Skills:} Proficient in Linux and ROS 1
+            \textbf{Other Skills:} Proficient in Linux and ROS
         \end{onecolentry}
-    
 
 \end{document}
