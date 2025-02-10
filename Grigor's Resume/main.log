@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.10)  10 FEB 2025 01:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.10)  10 FEB 2025 01:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -581,29 +581,31 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on 
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 188.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 194.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 196.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 194.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 194.
-LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 194.
+(Font)              scaled to size 14.4pt on input line 196.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/bold/n' on input line 196.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 10.0pt on input line 196.
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 198.
+(Font)              scaled to size 14.4pt on input line 196.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 198.
+LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
+(Font)              scaled to size 10.0pt on input line 198.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 200.
  (C:\Users\grish\AppData\Local\Programs\MiKTeX\tex/latex/sourcesanspro\ts1sourcesanspro-tlf.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 198.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 200.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 198.
+(Font)              scaled to size 10.0pt on input line 200.
 
-Overfull \hbox (1.04709pt too wide) in paragraph at lines 233--234
+Overfull \hbox (1.04709pt too wide) in paragraph at lines 239--240
 []\T1/SourceSansPro-TLF/regular/n/10 Coordinating with cross-functional teams for sys-tem in-te-gra-tion and per-for-mance. 
  []
+
+
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
 (Font)              `T1/SourceSansPro-TLF/regular/it' on input line 262.
@@ -634,13 +636,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  15242 strings out of 473530
  267472 string characters out of 5714794
- 679457 words of memory out of 5000000
+ 675457 words of memory out of 5000000
  38253 multiletter control sequences out of 15000+600000
  647840 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,385b,829s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,385b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on main.pdf (2 pages, 214141 bytes).
+Output written on main.pdf (2 pages, 214134 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
