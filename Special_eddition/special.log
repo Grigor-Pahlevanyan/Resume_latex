@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.10)  24 FEB 2025 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.10)  24 FEB 2025 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/grish/OneDrive/Desktop/Grish/Resume/Resume_latex/Grigor's Resume/main.tex"
-(c:/Users/grish/OneDrive/Desktop/Grish/Resume/Resume_latex/Grigor's Resume/main.tex
+**c:/Users/grish/OneDrive/Desktop/Grish/Resume/Resume_latex/Special_eddition/special.tex
+(c:/Users/grish/OneDrive/Desktop/Grish/Resume/Resume_latex/Special_eddition/special.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (C:\Users\grish\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -483,8 +483,8 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/regular/n' on input line 170.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
 (Font)              scaled to size 10.0pt on input line 170.
- (main.aux)
-\openout1 = `main.aux'.
+ (special.aux)
+\openout1 = `special.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
 LaTeX Font Info:    ... okay on input line 170.
@@ -560,9 +560,9 @@ LaTeX Font Info:    ... okay on input line 170.
 \everyMPtoPDFconversion=\toks29
 )
 Package hyperref Info: Link coloring ON on input line 170.
- (main.out) (main.out)
+ (special.out) (special.out)
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `special.out'.
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
 (Font)              `T1/SourceSansPro-TLF/bold/n' on input line 174.
@@ -601,50 +601,65 @@ LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
 (Font)              scaled to size 10.0pt on input line 200.
 
-Overfull \hbox (1.04709pt too wide) in paragraph at lines 239--240
-[]\T1/SourceSansPro-TLF/regular/n/10 Coordinating with cross-functional teams for sys-tem in-te-gra-tion and per-for-mance. 
+Overfull \hbox (0.35008pt too wide) in paragraph at lines 217--218
+[]\T1/SourceSansPro-TLF/regular/n/10 Designed and im-ple-mented high-voltage safety pro-to-cols for power elec-tronic sys-
  []
 
 
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 264.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 238.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 10.0pt on input line 264.
+(Font)              scaled to size 10.0pt on input line 238.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/it' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 264.
+(Font)              `T1/SourceSansPro-TLF/regular/it' on input line 238.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/it' will be
-(Font)              scaled to size 9.0pt on input line 264.
+(Font)              scaled to size 9.0pt on input line 238.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 264.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 238.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 264.
+(Font)              scaled to size 9.0pt on input line 238.
 [1
 
 {C:/Users/grish/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}{C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}]
+Overfull \hbox (1.2935pt too wide) in paragraph at lines 248--249
+[]\T1/SourceSansPro-TLF/regular/n/10 Designed flex-i-ble PCBs for com-pact bat-tery man-age-ment so-lu-tions, en-sur-ing dura-
+ []
 
-[2] 
+
+Overfull \hbox (6.69649pt too wide) in paragraph at lines 262--263
+[]\T1/SourceSansPro-TLF/regular/n/10 Created a pre-charge cir-cuit board for mo-tor con-troller in-te-gra-tion, im-prov-ing safety
+ []
+
+[2]
+Overfull \hbox (11.6071pt too wide) in paragraph at lines 281--282
+[]\T1/SourceSansPro-TLF/regular/n/10 Developed machine-learning al-go-rithms for dy-namic seat po-si-tion ad-just-ment based
+ []
+
+
+
+[3] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-(main.aux)
+(special.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0098840DCD05970BBB7A3226CEC23EEA;796.
+Package rerunfilecheck Info: File `special.out' has not changed.
+(rerunfilecheck)             Checksum: E71C9807CB3565E7749C03CDC743E4CC;659.
  ) 
 Here is how much of TeX's memory you used:
- 15242 strings out of 473530
- 267472 string characters out of 5714794
- 676457 words of memory out of 5000000
- 38253 multiletter control sequences out of 15000+600000
+ 15240 strings out of 473530
+ 267512 string characters out of 5714794
+ 673472 words of memory out of 5000000
+ 38252 multiletter control sequences out of 15000+600000
  647840 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,385b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,387b,724s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-It.pfb><C:/Users/grish/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on main.pdf (2 pages, 215900 bytes).
+Output written on special.pdf (3 pages, 218712 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
